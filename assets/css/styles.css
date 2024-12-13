@@ -30,11 +30,16 @@
 }
 
 html[data-theme='light'] .brand__logo {
-  filter: invert(1);
+  filter: invert(0);
 }
 
+
 html[data-theme='light'] .technologies__logo {
-  filter: invert(80%);
+  filter: invert(0);
+}
+
+.technologies__logo {
+  filter: invert(100%);
 }
 
 * {
@@ -139,6 +144,8 @@ p {
 .header__brand .brand__logo {
   width: 3.25rem;
   height: 3.25rem;
+  filter: invert(100%);
+ 
 }
 
 #toggleTheme {
@@ -325,8 +332,13 @@ main {
 .card__cover {
   width: 100%;
   border-radius: 0.5rem;
-  object-fit: cover;
+  object-fit: contain;
   object-position: center;
+}
+
+.card__photos{
+  display: inherit;
+  gap: 10px;
 }
 
 .card__body {
@@ -341,7 +353,7 @@ main {
   color: var(--title-color);
 }
 
-.card__list, .about__list {
+.card__list {
   margin-left: 1.25rem
 }
 
@@ -396,12 +408,19 @@ main {
 }
 
 .about__photo {
-  width: 100%;
+  width: 70%;
   object-fit: cover;
   object-position: center;
   pointer-events: none;
   border-radius: 50rem;
   border: 1px solid var(--primary-border-color);
+}
+
+.photoContainer{
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
 }
 
 .about__description {
@@ -430,7 +449,7 @@ main {
 }
 
 .about__content2 .col1 .row1,
-.about__content2 .col1 .row2 {
+.about__content2 .col1 {
   display: flex;
   flex-direction: column;
   gap: .5rem; 
@@ -520,6 +539,21 @@ footer p {
 }
 
 /* Responsividade */
+@media (max-width: 350px) {
+  h1{
+  font-size: 2rem;
+  }
+
+}
+
+@media (max-width: 750px) {
+  
+  .card__photos{
+    flex-direction: column;
+  }
+  
+}
+
 @media (min-width: 768px) {
   .header {
     position: fixed;
