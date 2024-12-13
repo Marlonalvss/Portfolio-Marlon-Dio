@@ -14,7 +14,7 @@ Construir seu Primeiro Portfólio Front-end do Zero.
 
 ## Conheça o portfólio 
 
-💻[Marlon Alves](https://marlonalvss.github.io/Portfolio-Marlon-Dio/)
+💻  [Marlon Alves](https://marlonalvss.github.io/Portfolio-Marlon-Dio/)
 
 ## Tecnologias
 [![JavaScript](https://img.shields.io/badge/JavaScript-000?style=for-the-badge&logo=javascript&logoColor=30A3DC)]()
